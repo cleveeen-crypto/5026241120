@@ -20,7 +20,10 @@
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/pegawai">/pegawai</a>
+                        <a class="nav-link active" href="/pegawai">Pegawai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/meja">Meja</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PR 1</a>
