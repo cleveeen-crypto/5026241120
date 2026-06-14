@@ -8,7 +8,7 @@
         <p style="color: green;">{{ session('success') }}</p>
     @endif
 
-    <a href="{{ route('siswa.create') }}">Tambah Siswa</a>
+    <a href="/siswa/create" class="btn btn-primary mb-3">Tambah Siswa</a>
 
     <br><br>
 
@@ -36,7 +36,6 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Hapus</button>
-
                     </form>
                 </td>
             </tr>

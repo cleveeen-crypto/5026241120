@@ -77,8 +77,7 @@ Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah'])->nam
 Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
 
 // crud keranjang belanja
-Route::get('/keranjang', [KeranjangBelanjaController::class, 'index']);
-Route::get('/keranjang/create',[KeranjangBelanjaController::class, 'create']);
-Route::post('/keranjang/store',[KeranjangBelanjaController::class, 'store']);
-Route::delete('/keranjang/delete/{id}',[KeranjangBelanjaController::class, 'destroy']);
-Route::post('/keranjang/beli/{id}',[KeranjangBelanjaController::class, 'beli']);
+Route::get('/keranjang', [KeranjangBelanjaController::class, 'index'])->name('keranjang.index');
+Route::get('/keranjang/create', [KeranjangBelanjaController::class, 'create'])->name('keranjang.create');
+Route::post('/keranjang/store', [KeranjangBelanjaController::class, 'store'])->name('keranjang.store');
+Route::delete('/keranjang/delete/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjang.destroy');

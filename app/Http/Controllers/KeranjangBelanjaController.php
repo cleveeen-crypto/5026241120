@@ -27,22 +27,9 @@ class KeranjangBelanjaController extends Controller
             'Harga' => $request->Harga
         ]);
 
-        return redirect('/keranjang');
+        return redirect()->route('keranjang.index')->with('success', 'Data keranjang berhasil ditambahkan.');
     }
-    public function beli($id)
-{
-    $item = DB::table('keranjangbelanja')
-        ->where('id', $id)
-        ->first();
 
-    DB::table('keranjangbelanja')
-        ->where('id', $id)
-        ->update([
-            'Jumlah' => $item->Jumlah + 1
-        ]);
-
-    return redirect('/keranjang');
-}
 
     public function destroy($id)
     {
@@ -50,6 +37,7 @@ class KeranjangBelanjaController extends Controller
             ->where('id', $id)
             ->delete();
 
-        return redirect('/keranjang');
+        return redirect()->route('keranjang.index')->with('success', 'Data keranjang berhasil dihapus.');
     }
+
 }

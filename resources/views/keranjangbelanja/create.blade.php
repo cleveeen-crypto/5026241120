@@ -4,7 +4,7 @@
 
     <h2>Tambah Pembelian</h2>
 
-    <form action="/keranjang/store" method="POST">
+    <form action="{{ route('keranjang.store') }}" method="POST">
         @csrf
 
         <p>
