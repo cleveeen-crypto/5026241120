@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\TumbuhanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -81,3 +82,9 @@ Route::get('/keranjang', [KeranjangBelanjaController::class, 'index'])->name('ke
 Route::get('/keranjang/create', [KeranjangBelanjaController::class, 'create'])->name('keranjang.create');
 Route::post('/keranjang/store', [KeranjangBelanjaController::class, 'store'])->name('keranjang.store');
 Route::delete('/keranjang/delete/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjang.destroy');
+
+//crud tumbuhan
+Route::get('/tumbuhan', [TumbuhanController::class, 'index'])->name('tumbuhan.index');
+Route::get('/tumbuhan/create', [TumbuhanController::class, 'create'])->name('tumbuhan.create');
+Route::post('/tumbuhan/store', [TumbuhanController::class, 'store'])->name('tumbuhan.store');
+Route::delete('/tumbuhan/delete/{id}', [TumbuhanController::class, 'destroy'])->name('tumbuhan.destroy');
