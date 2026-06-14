@@ -21,6 +21,12 @@ class KeranjangBelanjaController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+        'KodeBarang' => 'required|integer',
+        'Jumlah'     => 'required|integer',
+        'Harga'      => 'required|integer',
+     ]);
+
         DB::table('keranjangbelanja')->insert([
             'KodeBarang' => $request->KodeBarang,
             'Jumlah' => $request->Jumlah,

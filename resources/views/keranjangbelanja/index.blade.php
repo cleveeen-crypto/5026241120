@@ -27,7 +27,6 @@
                     <td>Rp {{ number_format($row->Harga, 0, ',', '.') }}</td>
                     <td>Rp {{ number_format($st, 0, ',', '.') }}</td>
                     <td>
-                        <a href="{{ route('keranjang.create') }}" class="btn btn-primary btn-sm">Beli</a>
 
                         <form action="{{ route('keranjang.destroy', $row->id) }}" method="POST" style="display:inline-block;">
                             @csrf
