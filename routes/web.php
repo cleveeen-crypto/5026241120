@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\TumbuhanController;
+use App\Http\Controllers\PenggajianController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,3 +89,8 @@ Route::get('/tumbuhan', [TumbuhanController::class, 'index'])->name('tumbuhan.in
 Route::get('/tumbuhan/create', [TumbuhanController::class, 'create'])->name('tumbuhan.create');
 Route::post('/tumbuhan/store', [TumbuhanController::class, 'store'])->name('tumbuhan.store');
 Route::delete('/tumbuhan/delete/{id}', [TumbuhanController::class, 'destroy'])->name('tumbuhan.destroy');
+
+//crud penggajian
+Route::get('/penggajian', [PenggajianController::class, 'index'])->name('penggajian.index');
+Route::get('/penggajian/tambah', [PenggajianController::class, 'tambah'])->name('penggajian.tambah');
+Route::post('/penggajian/store', [PenggajianController::class, 'store'])->name('penggajian.store');

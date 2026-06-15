@@ -32,10 +32,10 @@
                         <a class="nav-link" href="/keranjang">PR 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 3</a>
+                        <a class="nav-link" href="/tumbuhan">PR 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/penggajian">EAS</a>
                     </li>
                 </ul>
             </div>
